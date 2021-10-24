@@ -6,10 +6,16 @@
 
 <div class="container row">
   <div class="col-md-6">
-      <input type="file" >
+      <input type="file" (change)="onFileChanged($event)">
 
   </div>
   <div class="col-md-6">
-      <input type="button" value="upload">
+      <input type="button" (click)="onUpload()" value="upload">
+  </div>
+</div>
+
+<div class="container row">
+  <div class="col-md-12">
+      <div *ngIf=message>{{message}}</div>
   </div>
 </div>
